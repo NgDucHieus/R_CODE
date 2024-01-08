@@ -1,0 +1,53 @@
+library(MASS)
+df <-faithful
+
+erupt<-df$eruptions 
+u<-mean(erupt)
+dis<-(erupt-u)^2
+sum(dis)/length(erupt)
+
+SD <-(sum((erupt-mean(erupt))^2)/length(erupt))
+SD
+
+hist(erupt,breaks = 20,xlim =c(1,5.6))
+abline(v=mean(erupt)-sd(erupt),col = "red")
+abline(v=mean(erupt)+sd(erupt),col = "red")
+abline(v = mean(erupt),col="red")
+#chebysev 
+abline(v= mean(erupt)-2*sd(erupt),col = 'blue')
+abline(v=mean(erupt)+2*sd(erupt),col='blue')
+down <-(mean(erupt)-2*sd(erupt))
+
+sd(erupt)
+
+mean(erupt)
+sd(erupt)
+
+wait<-df$waiting
+wait <-df$waiting
+
+plot(wait, erupt, xlab = "X-axis Label", ylab = "Y-axis Label", pch = 16, col = "blue")
+lines(wait, erupt, type = "l", col = "red")
+
+
+
+# Create a data frame
+data <- data.frame(x = wait, y = erupt)
+
+# Fit a linear model
+model <- lm(y ~ x, data = data)
+
+# Print summary of the model
+summary(model)
+
+# Plot the points
+plot(wait, erupt, main = "Linear Regression", xlab = "X-axis Label", ylab = "Y-axis Label", pch = 16, col = "blue")
+
+# Add the regression line to the plot
+abline(model, col = "red")
+
+DATA <- c(95,106,106,118,188)
+sqrt(var(DATA))
+
+
+

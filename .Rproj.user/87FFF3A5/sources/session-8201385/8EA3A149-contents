@@ -1,0 +1,43 @@
+
+
+data<-read.csv(file ="diem_thi_thpt_2023.csv",head = TRUE )
+
+math_clean <-na.omit(data$toan)
+
+
+
+library(ggplot2)
+
+ggplot(data = data.frame(math_clean = math_clean), aes(x = math_clean)) +
+  geom_histogram(binwidth = 1/5, fill = "#69b3a2", color = "#e9ecef", alpha = 0.8) +
+  geom_vline(xintercept = quantile(math_clean, 0.1), color = "green", linetype = "dashed", size = 1) +
+  geom_vline(xintercept = quantile(math_clean, 0.25), color = "purple", linetype = "dashed", size = 1) +
+  geom_vline(xintercept = median(math_clean), color = "red", linetype = "dashed", size = 1) +
+  geom_vline(xintercept = quantile(math_clean, 0.75), color = "orange", linetype = "dashed", size = 1) +
+  geom_vline(xintercept = quantile(math_clean, 0.9), color = "brown", linetype = "dashed", size = 1) +
+  geom_vline(xintercept = mean(math_clean), color = 'blue', linetype = "dashed", size = 1) +
+  labs(title = "Histogram with Central Tendency Lines",
+       x = "Value",
+       y = "Frequency") +
+  theme_minimal()
+
+
+
+# Generate two independent samples
+group1 <- c(25, 28, 30, 32, 35)
+group2 <- c(22, 26, 29, 31, 33)
+
+# Perform independent samples t-test
+result <- t.test(group1, group2)
+
+# Print the result
+print(result)
+
+
+
+
+
+
+
+
+

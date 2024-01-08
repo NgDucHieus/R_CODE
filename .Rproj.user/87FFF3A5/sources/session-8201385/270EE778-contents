@@ -1,0 +1,292 @@
+df <-data.frame(trial)
+#dir() list the file 
+#getwd() determine the current directory
+
+#access each individual column using "$" to separate two name
+heisenberg$trial
+heisenberg$mass
+heisenberg$velocity
+names(heisenberg)#show the column in heisenberg
+
+attributes(heisenberg)
+help("read.fwf")
+help("Normal")\
+
+
+
+
+B<-c("A","A+","A","B","C","D","B","C","F","B")
+
+a_2<-factor(B,ordered =TRUE , levels = c("F","D","C","B","A","A+"))
+freq.table= table(a_2)
+pie(freq.table)
+scorelevels = c("F","D","C","B","A","A+")
+color=c("red","blue","pink","cyan","brown","purple")
+
+legend("topleft",c("F","D","C","B","A","A+"),fill=color,cex =0.95)
+library(MASS)
+a=painters
+composition=c(a["Composition"])
+
+
+school =a["School"]
+plot(school,)
+b=summary(a)
+composition[[1]][1]
+
+summary(a["School"])
+summary(school)
+H<- a[51:54,]
+H
+summary(H)
+meanA = 10.4 14.7 9.00 8.2 
+meanB = 12.17  14.33 7.333 8.167  
+meanC=13.17 13.5 7.50  7.167  
+meanD=9.1 9.9 16.10  3.20 
+meanE=13.57 12.86 11.86 8.143 
+meanF=7.25 10.25  9.5   7.75
+meanG=14.33  10.50 17.00 12.75 
+meanH=14.00 14.00 6.5 15.25
+
+
+10.4 
+meanB = 12.17    
+meanC=13.17   
+meanD=9.1 
+meanE=13.57  
+meanF=7.25 
+meanG=14.33   
+meanH=15.00
+compo<-c(10.4 
+          , 12.17 ,   
+         13.17 ,  
+         9.1 ,
+         13.57,  
+        7.25 ,
+         14.33 ,  
+         15.00)
+barplot(compo,levels = c("F","D","C","B","A","A+")
+a
+
+
+
+average_composition_A <- mean(a$Composition[a$School == "A"])
+average_composition_B <- mean(a$Composition[a$School == "B"])
+average_composition_C <- mean(a$Composition[a$School == "C"])
+average_composition_D <- mean(a$Composition[a$School == "D"])
+average_composition_E <- mean(a$Composition[a$School == "E"])
+average_composition_F <- mean(a$Composition[a$School == "F"])
+average_composition_G <- mean(a$Composition[a$School == "G"])
+average_composition_H <- mean(a$Composition[a$School == "H"])
+average_composition <-c(
+  average_composition_A,
+  average_composition_B ,
+  average_composition_c ,
+  average_composition_D,
+  average_composition_E ,
+  average_composition_F ,
+  average_composition_G ,
+  average_composition_H )
+
+barplot(average_composition,levels = c("A","B","C","D","E","F","G","H")
+barplot(average_Drawing, main = "Drawing", names.arg = schools)
+barplot(average_Colour, main = "Colour", names.arg = schools)        
+barplot(average_Expression, main = "Expression", names.arg = schools)        
+
+average_Drawing_A <- mean(a$Drawing[a$School == "A"])
+average_Drawing_B <- mean(a$Drawing[a$School == "B"])
+average_Drawing_c <- mean(a$Drawing[a$School == "C"])
+average_Drawing_D <- mean(a$Drawing[a$School == "D"])
+average_Drawing_E <- mean(a$Drawing[a$School == "E"])
+average_Drawing_F <- mean(a$Drawing[a$School == "F"])
+average_Drawing_G <- mean(a$Drawing[a$School == "G"])
+average_Drawing_H <- mean(a$[a$School == "H"])
+average_Drawing <-c(
+  average_Drawing_A,
+  average_Drawing_B ,
+  average_Drawing_c ,
+  average_Drawing_D,
+  average_Drawing_E ,
+  average_Drawing_F ,
+  average_Drawing_G ,
+  average_Drawing_H )
+schools <- unique(a$School)
+barplot(average_Drawing,names.arg = schools)
+
+# Function to calculate average scores and create a barplot
+calculate_and_plot_averages <- function(data, variable) {
+# Calculate average scores by school
+  schools <- unique(data$School)
+    
+  for i in length(data$School==variable){
+    averageA <- mean(a$variabel[a$School == "A"])
+    averageB <- mean(a$variabel[a$School == "B"])
+  }
+
+  
+  return(avarages)
+}
+
+
+# Function to calculate average scores for schools from A to G for a given variable
+calculate_averages_from_A_to_G <- function(data, variable) {
+  # Create an empty list to store averages
+  average_list <- list()
+  
+  # Schools from A to G
+  schools <- c("A", "B", "C", "D", "E", "F", "G")
+  
+  for (school in schools) {
+    # Calculate average for the specified variable within each school
+    average <- mean(data[[variable]][data$School == school])
+    
+    # Add the average to the list with the school name as the list name
+    average_list[[school]] <- average
+  }
+  
+  return(average_list)
+}
+
+# Example usage:
+# Assuming you have a data frame 'a'
+# Calculate and get the list of averages for the "Composition" variable
+c1=composition_averages <- calculate_averages_from_A_to_G(a, "Composition")
+c2=drawing_averages <- calculate_averages_from_A_to_G(a, "Drawing")
+c3=Expression_averages <- calculate_averages_from_A_to_G(a, "Expression")
+c4=composition_averages <- calculate_averages_from_A_to_G(a, "Composition")
+
+
+
+
+sum_averages_range <- function(data, start_school, end_school) {
+  sum_list <- list()
+  
+  variables <- c("Composition", "Drawing", "Colour", "Expression") 
+  for (school in unique(data$School)) {
+    if (school >= start_school & school <= end_school) {
+      averages <- numeric()
+      
+      for (variable in variables) {
+        average <- mean(data[[variable]][data$School == school])
+        
+        averages <- c(averages, average)
+      }
+      
+      sum_averages <- sum(averages)
+      
+      sum_list[[school]] <- sum_averages
+    }
+  }
+  
+  
+
+  
+  return(sum_list)
+}
+
+
+total_averages=total_averages <- sum_averages_range(a, "A", "H")
+
+unig = unique(a$School)
+unig
+unig[1]
+
+sums <- unlist(total_averages)
+
+
+schools <- names(total_averages)
+ylims<-c(0,50)
+
+barplot(sums, names.arg = schools, main = "Sums of Average Scores for Schools A to G",ylim =ylims )
+
+sums
+
+
+E = faithful$eruptions
+W = faithful$waiting
+plot(W,E)
+boxplot(E)
+boxplot(E,xlab="Waiting",horizontal=TRUE)
+summary(E)
+
+
+
+
+x_values<-data$x
+y_values<-data$y
+z_values<-data$z
+
+
+
+data <- read.table("C:\\Users\\Admin\\Desktop\\SXTK\\Input\\point_cloud.txt", sep = ",", header = TRUE)
+x_values<-data$x
+y_values<-data$y
+z_values<-data$z
+library(scatterplot3d)
+
+scatterplot3d(data$x, data$y, data$z, color = "blue", pch = 16)
+
+x<-1e-31
+print(x)
+
+
+min_double <- .Machine$double.min
+cat("Số nhỏ nhất kiểu double:", min_double)
+max_integer <- .Machine$integer.max
+cat("min_float",max_integer)
+
+
+
+decimal_number <- 4.94065645841246544176568792868E-324
+binary_representation <- intToBits(decimal_number)
+binary_string <- paste0(rev(unlist(lapply(binary_representation, function(x) {
+  sprintf("%08s", as.character(as.integer(x)))
+}))), collapse = "")
+
+# Print the binary representation
+cat("Binary representation of", decimal_number, "is", binary_string, "\n")
+
+
+min_double <-.Machine$double.min
+print(min_double)
+# Find the smallest positive floating-point number
+smallest_float <- .Machine$double.min
+
+# Print the smallest floating-point number
+cat("The smallest positive floating-point number in R is:", smallest_float, "\n")
+small_number <- 1.23e-4
+cat("A small number in power syntax:", small_number, "\n")
+
+epsilon <- .Machine$double.eps
+cat("epsilon", epsilon, "\n")
+print(.Machine$double.neg.eps)
+help(.Machine)
+
+
+faithful
+library(MASS)
+df<-faithful
+mean(df$eruptions)
+mean(df$waiting)
+s<-summary(df)
+s
+hist(faithful$eruptions)
+median(faithful$eruptions)
+max(faithful$eruptions)
+count_table <-table(faithful$eruptions)
+position<-which(count_table ==max(count_table))
+position
+max(count_table)
+
+
+count_table <- table(faithful$eruptions)
+
+max_count <-max(count_table) 
+
+position<-which(count_table ==max(count_table))
+position
+var(faithful$eruptions)
+
+count_table[11]
+
+  
